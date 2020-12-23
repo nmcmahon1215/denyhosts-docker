@@ -8,6 +8,7 @@ RUN apk add --no-cache git python py-ipaddr \
  && apk del git
 
 WORKDIR /denyhosts
+RUN pip install requests
 RUN python setup.py install \
  && rm -r /denyhosts
 
